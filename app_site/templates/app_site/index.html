@@ -1,0 +1,32 @@
+{% extends "app_site/base.html" %}
+
+
+{% block title %}
+about
+{% endblock title %}
+
+{% block content %}
+
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+        <div>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+            </nav>
+        </div>
+    </header>
+    <main class="px-3">
+        <h1>Обо мне</h1>
+        <p class="lead">Здравствуйте, меня зовут Дмитрий.<br>Здесь я хочу рассказать немного о себе.</p>
+        <p class="lead">
+        </p>
+
+        {% if img1.title == 'я' %}
+        <img src="{{ img1.img.url }}" class="img-fluid" width="250" height="300">
+        {% endif %}
+    </main>
+            {% include 'app_site/card.html' %}
+
+</div>
+</body>
+{% endblock content %}
